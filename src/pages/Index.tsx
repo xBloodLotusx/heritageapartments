@@ -1,6 +1,6 @@
 import overheadImg from "@/assets/Overhead.jpeg";
 import overhead2Img from "@/assets/Overhead2.jpeg";
-import communityImg from "@/assets/CommunityRoom.jpeg";
+import laundryentrance from "@/assets/laundryentrance.jpeg";
 import entranceImg from "@/assets/Entrance.jpg";
 import kitchenWideImg from "@/assets/KitchenWide.jpg";
 import kitchenImg from "@/assets/Kitchen.jpg";
@@ -41,14 +41,14 @@ const reasons = [
 
 const gallery = [
   { src: overhead2Img, alt: "Aerial overhead view of Heritage Apartments community", span: "md:col-span-2 md:row-span-2" },
-  { src: entranceImg, alt: "Heritage Apartments entrance" , span: "md:col-span-2 md:row-span-2"},
-  { src: communityImg, alt: "Community room and shared amenity spaces" },
+  { src: entranceImg, alt: "Heritage Apartments entrance" },
   { src: kitchenWideImg, alt: "Updated apartment kitchen with ample counter space" },
   { src: kitchenImg, alt: "Updated apartment kitchen with white cabinets" },
   { src: roomImg, alt: "Comfortable bedroom in a Heritage apartment" },
   { src: showerImg, alt: "Clean modern bathroom with shower" },
-  { src: laundry1Img, alt: "On-site laundromat with washers and dryers", span: "md:col-span-2" },
+  { src: laundry1Img, alt: "On-site laundromat with washers and dryers" },
   { src: laundry2Img, alt: "On-site laundromat facility" },
+  { src: laundryentrance, alt: "Community room and shared amenity spaces" },
 ];
 
 const Index = () => {
@@ -123,28 +123,27 @@ const Index = () => {
           <div className="md:col-span-5">
             <span className="text-xs uppercase tracking-[0.3em] text-accent">About the Community</span>
             <h2 className="mt-4 text-4xl md:text-5xl text-balance">
-              A turn-key residential community, fully occupied and thoughtfully kept.
+              A turn-key residential community, thoughtfully maintained and tenant-focused.
             </h2>
           </div>
           <div className="md:col-span-7 md:pt-2">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Heritage Apartments is a 48-unit residential community offering spacious two-bedroom,
-              one-bathroom homes that average 800 square feet. Built in three phases — sixteen units in 2021,
-              sixteen in 2022, and sixteen in 2023 — every exterior has been remodeled and seven interiors
-              have been freshly updated.
+              Heritage Apartments is a resident-focused community of 48 two-bedroom, one-bath homes (≈800 sq ft) designed for comfortable, everyday living. The community <strong>Borders Heritage Park</strong>, giving residents direct access to green space, playgrounds, and walking trails.
             </p>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              The property is currently <span className="text-foreground font-medium">100% occupied</span>,
-              a quiet reflection of consistent demand and steady management. Each home includes its own HVAC
-              system and electric water heater.
+              <strong>Ideal for Families</strong> — spacious floorplans, quiet streets, and on-site amenities like the laundromat. Conveniently located 1 Mile from Lowe's and the new Anderson Towns Crossing with easy access to shopping and dining.
             </p>
-            <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
+          </div>
+          <div className="md:col-span-12">
+            <dl className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-6 border-t border-border pt-8">
               {[
                 { k: "48", v: "Total Units" },
                 { k: "800", v: "Avg Sq Ft" },
-                { k: "100%", v: "Occupied" },
+                { k: "2BD/1BA", v: "Unit Type" },
+                { k: "$1000", v: "Rent" },
+                { k: "$500", v: "Security Deposit" },
               ].map((s) => (
-                <div key={s.v}>
+                <div key={s.v} className="flex flex-col items-start md:items-center">
                   <dt className="font-serif text-4xl md:text-5xl text-primary">{s.k}</dt>
                   <dd className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">{s.v}</dd>
                 </div>
@@ -275,8 +274,7 @@ const Index = () => {
                 Interested in joining the <em className="font-light">waitlist?</em>
               </h2>
               <p className="mt-6 text-primary-foreground/75 max-w-md text-lg">
-                Heritage Apartments is fully occupied. Reach out to leasing to be notified when a
-                home becomes available.
+                Homes are currently leased — reach out to leasing to join the waitlist.
               </p>
             </div>
             <div className="md:col-span-6 md:pl-8 space-y-5 text-primary-foreground/85">
