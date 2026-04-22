@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,35 +10,41 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Heritage Apartments — warm editorial residential palette */
+    --background: 38 30% 97%;
+    --foreground: 25 25% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 25% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 25% 14%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 22 38% 32%;            /* warm terracotta-brown */
+    --primary-foreground: 38 35% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 36 22% 92%;
+    --secondary-foreground: 25 25% 14%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 36 18% 90%;
+    --muted-foreground: 25 12% 38%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 18 55% 55%;             /* sunset clay accent */
+    --accent-foreground: 38 35% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 20% 86%;
+    --input: 30 20% 86%;
+    --ring: 22 38% 32%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
+
+    --gradient-warm: linear-gradient(180deg, hsl(38 35% 97%) 0%, hsl(36 28% 93%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(25 30% 12% / 0.15) 0%, hsl(25 30% 12% / 0.55) 100%);
+    --shadow-soft: 0 1px 2px hsl(25 25% 14% / 0.04), 0 8px 24px -8px hsl(25 25% 14% / 0.12);
+    --shadow-image: 0 20px 60px -20px hsl(25 25% 14% / 0.35);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +108,17 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
   }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+    font-feature-settings: "ss01";
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .container-narrow { @apply mx-auto max-w-6xl px-6 md:px-10; }
 }
