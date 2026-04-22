@@ -1,11 +1,11 @@
-import heroImg from "@/assets/hero-exterior.jpg";
-import kitchenImg from "@/assets/gallery-kitchen.jpg";
-import livingImg from "@/assets/gallery-living.jpg";
-import bedroomImg from "@/assets/gallery-bedroom.jpg";
-import bathroomImg from "@/assets/gallery-bathroom.jpg";
-import laundryImg from "@/assets/gallery-laundry.jpg";
-import aerialImg from "@/assets/gallery-aerial.jpg";
-import exterior2Img from "@/assets/gallery-exterior2.jpg";
+import overheadImg from "@/assets/Overhead.jpg";
+import entranceImg from "@/assets/Entrance.jpg";
+import kitchenWideImg from "@/assets/KitchenWide.jpg";
+import kitchenImg from "@/assets/Kitchen.jpg";
+import roomImg from "@/assets/Room.jpg";
+import showerImg from "@/assets/Shower.jpg";
+import laundry1Img from "@/assets/laundry1.jpg";
+import laundry2Img from "@/assets/laundry2.jpg";
 import { Button } from "@/components/ui/button";
 import {
   Home,
@@ -38,13 +38,14 @@ const reasons = [
 ];
 
 const gallery = [
-  { src: exterior2Img, alt: "Heritage Apartments building exterior with modern siding", span: "md:col-span-2 md:row-span-2" },
+  { src: entranceImg, alt: "Heritage Apartments entrance", span: "md:col-span-2 md:row-span-2" },
+  { src: kitchenWideImg, alt: "Updated apartment kitchen with ample counter space" },
   { src: kitchenImg, alt: "Updated apartment kitchen with white cabinets" },
-  { src: livingImg, alt: "Bright apartment living room with natural light" },
-  { src: bedroomImg, alt: "Comfortable bedroom in a Heritage apartment" },
-  { src: bathroomImg, alt: "Clean modern bathroom with white tile" },
-  { src: laundryImg, alt: "On-site laundromat with washers and dryers", span: "md:col-span-2" },
-  { src: aerialImg, alt: "Aerial view of Heritage Apartments community", span: "md:col-span-3" },
+  { src: roomImg, alt: "Comfortable bedroom in a Heritage apartment" },
+  { src: showerImg, alt: "Clean modern bathroom with shower" },
+  { src: laundry1Img, alt: "On-site laundromat with washers and dryers", span: "md:col-span-2" },
+  { src: laundry2Img, alt: "On-site laundromat facility" },
+  { src: overheadImg, alt: "Aerial overhead view of Heritage Apartments community", span: "md:col-span-3" },
 ];
 
 const Index = () => {
@@ -73,8 +74,8 @@ const Index = () => {
       {/* Hero */}
       <section className="relative h-[92vh] min-h-[640px] w-full overflow-hidden">
         <img
-          src={heroImg}
-          alt="Heritage Apartments exterior at golden hour in Mount Pleasant, Texas"
+          src={overheadImg}
+          alt="Aerial overhead view of Heritage Apartments community in Mount Pleasant, Texas"
           width={1920}
           height={1280}
           className="absolute inset-0 h-full w-full object-cover"

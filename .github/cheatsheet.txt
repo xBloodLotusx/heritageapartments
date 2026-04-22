@@ -1,0 +1,7 @@
+vite.config.ts:
+  base: mode === "/name/",
+App.tsx:
+  <BrowserRouter basename={import.meta.env.BASE_URL}>
+terminal:
+  npm install
+  npm run build
