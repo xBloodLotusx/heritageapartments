@@ -103,12 +103,12 @@ const Index = () => {
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a href="#contact">
-              <Button size="lg" className="rounded-none bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
                 Schedule a Tour
               </Button>
             </a>
-            <a href="#about">
-              <Button size="lg" variant="outline" className="rounded-none bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <a href="#contact">
+              <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
                 Apply Now
               </Button>
             </a>
@@ -161,7 +161,7 @@ const Index = () => {
               Built recently. Maintained meticulously.
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-background">
             {features.map((f) => (
               <div key={f.title} className="bg-background p-8 md:p-10 group hover:bg-secondary/60 transition-colors">
                 <f.icon className="h-7 w-7 text-accent" strokeWidth={1.5} />
@@ -269,12 +269,21 @@ const Index = () => {
         <div className="container-narrow py-20 md:py-28">
           <div className="grid md:grid-cols-12 gap-12 pb-16 border-b border-primary-foreground/15">
             <div className="md:col-span-6">
-              <h2 className="font-serif text-4xl md:text-6xl text-balance text-primary-foreground">
-                Interested in joining the <em className="font-light">waitlist?</em>
+              <h2 className="font-serif text-3xl md:text-5xl text-balance text-primary-foreground">
+                Interested?
               </h2>
-              <p className="mt-6 text-primary-foreground/75 max-w-md text-lg">
-                Homes are currently leased — reach out to leasing to join the waitlist.
-              </p>
+              <div className="mt-6 flex flex-wrap gap-4">
+                <a href="#contact">
+                  <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
+                    Schedule a Tour
+                  </Button>
+                </a>
+                <a href="#contact">
+                  <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
+                    Apply Now
+                  </Button>
+                </a>
+              </div>
             </div>
             <div className="md:col-span-6 md:pl-8 space-y-5 text-primary-foreground/85">
               <div className="flex items-center gap-3">
