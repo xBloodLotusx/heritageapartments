@@ -1,11 +1,13 @@
-import overheadImg from "@/assets/Overhead.jpg";
+import overheadImg from "@/assets/Overhead.jpeg";
+import overhead2Img from "@/assets/Overhead2.jpeg";
+import communityImg from "@/assets/CommunityRoom.jpeg";
 import entranceImg from "@/assets/Entrance.jpg";
 import kitchenWideImg from "@/assets/KitchenWide.jpg";
 import kitchenImg from "@/assets/Kitchen.jpg";
 import roomImg from "@/assets/Room.jpg";
 import showerImg from "@/assets/Shower.jpg";
-import laundry1Img from "@/assets/laundry1.jpg";
-import laundry2Img from "@/assets/laundry2.jpg";
+import laundry1Img from "@/assets/laundry1.jpeg";
+import laundry2Img from "@/assets/laundry2.jpeg";
 import { Button } from "@/components/ui/button";
 import {
   Home,
@@ -38,14 +40,15 @@ const reasons = [
 ];
 
 const gallery = [
-  { src: entranceImg, alt: "Heritage Apartments entrance", span: "md:col-span-2 md:row-span-2" },
+  { src: overhead2Img, alt: "Aerial overhead view of Heritage Apartments community", span: "md:col-span-2 md:row-span-2" },
+  { src: entranceImg, alt: "Heritage Apartments entrance" , span: "md:col-span-2 md:row-span-2"},
+  { src: communityImg, alt: "Community room and shared amenity spaces" },
   { src: kitchenWideImg, alt: "Updated apartment kitchen with ample counter space" },
   { src: kitchenImg, alt: "Updated apartment kitchen with white cabinets" },
   { src: roomImg, alt: "Comfortable bedroom in a Heritage apartment" },
   { src: showerImg, alt: "Clean modern bathroom with shower" },
   { src: laundry1Img, alt: "On-site laundromat with washers and dryers", span: "md:col-span-2" },
   { src: laundry2Img, alt: "On-site laundromat facility" },
-  { src: overheadImg, alt: "Aerial overhead view of Heritage Apartments community", span: "md:col-span-3" },
 ];
 
 const Index = () => {
@@ -63,11 +66,18 @@ const Index = () => {
             <a href="#gallery" className="hover:text-primary-foreground transition-colors">Gallery</a>
             <a href="#location" className="hover:text-primary-foreground transition-colors">Location</a>
           </nav>
-          <a href="#contact">
-            <Button variant="secondary" size="sm" className="rounded-none">
-              Inquire
-            </Button>
-          </a>
+          <div className="flex items-center gap-3">
+            <a href="#contact">
+              <Button size="sm" variant="secondary" className="rounded-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                Apply Now
+              </Button>
+            </a>
+            <a href="#contact">
+              <Button variant="secondary" size="sm" className="rounded-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                Resident Portal
+              </Button>
+            </a>
+          </div>
         </div>
       </header>
 
@@ -100,7 +110,7 @@ const Index = () => {
             </a>
             <a href="#about">
               <Button size="lg" variant="outline" className="rounded-none bg-transparent border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Explore the Property
+                Apply Now
               </Button>
             </a>
           </div>
