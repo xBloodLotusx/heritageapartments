@@ -26,8 +26,7 @@ const features = [
   { icon: Wind, title: "Individual HVAC", body: "Private climate control and electric water heater in every home." },
   { icon: WashingMachine, title: "On-site Laundromat", body: "Oversized facility with owned washers and dryers, available daily." },
   { icon: Car, title: "100 Parking Spaces", body: "Generous on-site parking for residents and guests across the community." },
-  { icon: Trees, title: "5.38 Acre Lot", body: "Multiple buildings on a thoughtfully landscaped, tree-lined property." },
-  { icon: ShieldCheck, title: "Built 2021–2023", body: "Recently constructed, fully remodeled exteriors and updated interiors." },
+  { icon: ShieldCheck, title: "Built 1999–2023", body: "Sixteen units were originally constructed 1999–2021 and thirty-two additional units were added 2021–2023; the older 16 units have since been renovated with refreshed exteriors and updated interiors." },
 ];
 
 const reasons = [
@@ -123,7 +122,7 @@ const Index = () => {
           <div className="md:col-span-5">
             <span className="text-xs uppercase tracking-[0.3em] text-accent">About the Community</span>
             <h2 className="mt-4 text-4xl md:text-5xl text-balance">
-              A turn-key residential community, thoughtfully maintained and tenant-focused.
+              A quiet residential community, thoughtfully maintained and tenant-focused.
             </h2>
           </div>
           <div className="md:col-span-7 md:pt-2">
