@@ -9,6 +9,7 @@ import showerImg from "@/assets/Shower.jpg";
 import laundry1Img from "@/assets/laundry1.jpeg";
 import laundry2Img from "@/assets/laundry2.jpeg";
 import { Button } from "@/components/ui/button";
+import { LeaseChat } from "@/components/LeaseChat";
 import {
   Home,
   Wind,
@@ -52,7 +53,8 @@ const gallery = [
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <>
+      <main className="min-h-screen bg-background text-foreground">
       {/* Nav */}
       <header className="absolute top-0 left-0 right-0 z-20">
         <div className="container-narrow flex items-center justify-between py-6">
@@ -307,6 +309,8 @@ const Index = () => {
         </div>
       </footer>
     </main>
+    <LeaseChat />
+    </>
   );
 };
 
