@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Heritage Apartments — Project
 
 TODO: Document your project here
