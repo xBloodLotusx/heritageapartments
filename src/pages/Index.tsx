@@ -11,6 +11,7 @@ import laundry2Img from "@/assets/laundry2.jpeg";
 import { Button } from "@/components/ui/button";
 import { LeaseChat } from "@/components/LeaseChat";
 import { AvailableUnits } from "@/components/AvailableUnits";
+import { useAppfolioListings } from "@/hooks/use-appfolio-listings";
 import {
   Home,
   Wind,
@@ -52,7 +53,12 @@ const gallery = [
   { src: laundryentrance, alt: "Community room and shared amenity spaces" },
 ];
 
+const RESIDENT_PORTAL_URL =
+  "https://account.appfolio.com/realms/foliospace/protocol/openid-connect/auth?client_id=client-b10b7986-c348-46ad-8a86-812d77396647&redirect_uri=https%3A%2F%2Fniceneassetmgmt.appfolio.com%2Fconnect%2Fusers%2Foauth%2Fcallback&response_type=code&scope=openid&session_timed_out=false&state=%2Fconnect%2F";
+
 const Index = () => {
+  const { hasUnits, listingUrl } = useAppfolioListings();
+
   return (
     <>
       <main className="min-h-screen bg-background text-foreground">
@@ -69,12 +75,14 @@ const Index = () => {
             <a href="#location" className="hover:text-primary-foreground transition-colors">Location</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="#contact">
-              <Button size="sm" variant="secondary" className="rounded-none transition-colors hover:bg-accent hover:text-accent-foreground">
-                Apply Now
-              </Button>
-            </a>
-            <a href="#contact">
+            {hasUnits && (
+              <a href="#available-units">
+                <Button size="sm" variant="secondary" className="rounded-none transition-colors hover:bg-accent hover:text-accent-foreground">
+                  Apply Now
+                </Button>
+              </a>
+            )}
+            <a href={RESIDENT_PORTAL_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="secondary" size="sm" className="rounded-none transition-colors hover:bg-accent hover:text-accent-foreground">
                 Resident Portal
               </Button>
@@ -110,11 +118,13 @@ const Index = () => {
                 Schedule a Tour
               </Button>
             </a>
-            <a href="#contact">
-              <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
-                Apply Now
-              </Button>
-            </a>
+            {hasUnits && (
+              <a href="#available-units">
+                <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
+                  Apply Now
+                </Button>
+              </a>
+            )}
           </div>
         </div>
       </section>
@@ -156,7 +166,7 @@ const Index = () => {
       </section>
 
       {/* Available Units */}
-      <AvailableUnits />
+      <AvailableUnits hasUnits={hasUnits} listingUrl={listingUrl} />
 
       {/* Features */}
       <section id="features" className="py-24 md:py-32">
@@ -284,11 +294,13 @@ const Index = () => {
                     Schedule a Tour
                   </Button>
                 </a>
-                <a href="#contact">
-                  <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
-                    Apply Now
-                  </Button>
-                </a>
+                {hasUnits && (
+                  <a href="#available-units">
+                    <Button size="lg" className="rounded-none bg-transparent text-primary-foreground/95 hover:bg-accent hover:text-accent-foreground border border-white">
+                      Apply Now
+                    </Button>
+                  </a>
+                )}
               </div>
             </div>
             <div className="md:col-span-6 md:pl-8 space-y-5 text-primary-foreground/85">
