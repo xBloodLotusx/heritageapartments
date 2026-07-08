@@ -10,6 +10,7 @@ import laundry1Img from "@/assets/laundry1.jpeg";
 import laundry2Img from "@/assets/laundry2.jpeg";
 import { Button } from "@/components/ui/button";
 import { LeaseChat } from "@/components/LeaseChat";
+import { AvailableUnits } from "@/components/AvailableUnits";
 import {
   Home,
   Wind,
@@ -153,6 +154,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Available Units */}
+      <AvailableUnits />
 
       {/* Features */}
       <section id="features" className="py-24 md:py-32">
