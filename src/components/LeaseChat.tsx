@@ -96,7 +96,7 @@ const leaseKnowledge = [
   {
     keywords: ["contact", "phone", "call", "leasing office", "management", "reach", "email"],
     answer:
-      "You can reach the leasing office at:\n📍 1434 W. 16th St., Mount Pleasant, TX 75455\n📧 leasing@heritage-apartments.example\nPhone available upon request.",
+      "You can reach the leasing office at:\n📍 1434 W. 16th St., Mount Pleasant, TX 75455\n📧 Manager@niceneinvestments.com\n📞 (903) 708-3021",
   },
   {
     keywords: ["jury", "lawsuit", "court", "dispute", "legal", "sue"],
@@ -143,7 +143,7 @@ function findAnswer(query: string): string {
   }
 
   if (bestScore === 0) {
-    return "I'm not sure about that specific question. For the most accurate information, please contact the leasing office directly:\n📧 leasing@heritage-apartments.example\n📍 1434 W. 16th St., Mount Pleasant, TX 75455";
+    return "I'm not sure about that specific question. For the most accurate information, please contact the leasing office directly:\n📧 Manager@niceneinvestments.com\n📞 (903) 708-3021\n📍 1434 W. 16th St., Mount Pleasant, TX 75455";
   }
   return bestAnswer;
 }

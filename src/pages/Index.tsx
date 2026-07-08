@@ -17,7 +17,6 @@ import {
   Wind,
   WashingMachine,
   Car,
-  Trees,
   ShieldCheck,
   MapPin,
   Phone,
@@ -310,11 +309,15 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-accent" strokeWidth={1.5} />
-                <span>Leasing line — available upon request</span>
+                <a href="tel:+19037083021" className="hover:text-primary-foreground transition-colors">
+                  (903) 708-3021
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-accent" strokeWidth={1.5} />
-                <span>leasing@heritage-apartments.example</span>
+                <a href="mailto:Manager@niceneinvestments.com" className="hover:text-primary-foreground transition-colors">
+                  Manager@niceneinvestments.com
+                </a>
               </div>
             </div>
           </div>
