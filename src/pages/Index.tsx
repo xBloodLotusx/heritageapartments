@@ -8,6 +8,7 @@ import roomImg from "@/assets/Room.jpg";
 import showerImg from "@/assets/Shower.jpg";
 import laundry1Img from "@/assets/laundry1.jpeg";
 import laundry2Img from "@/assets/laundry2.jpeg";
+import locationImg from "@/assets/Location.png";
 import { Button } from "@/components/ui/button";
 import { LeaseChat } from "@/components/LeaseChat";
 import { AvailableUnits } from "@/components/AvailableUnits";
@@ -145,22 +146,6 @@ const Index = () => {
               <strong>Ideal for Families</strong> — spacious floorplans, quiet streets, and on-site amenities like the laundromat. Conveniently located 1 Mile from Lowe's and the new Anderson Towns Crossing with easy access to shopping and dining.
             </p>
           </div>
-          <div className="md:col-span-12">
-            <dl className="mt-12 grid grid-cols-2 md:grid-cols-5 gap-6 border-t border-border pt-8">
-              {[
-                { k: "48", v: "Total Units" },
-                { k: "800", v: "Avg Sq Ft" },
-                { k: "2BD/1BA", v: "Unit Type" },
-                { k: "$1000", v: "Rent" },
-                { k: "$500", v: "Security Deposit" },
-              ].map((s) => (
-                <div key={s.v} className="flex flex-col items-start md:items-center">
-                  <dt className="font-serif text-4xl md:text-5xl text-primary">{s.k}</dt>
-                  <dd className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">{s.v}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
         </div>
       </section>
 
@@ -275,6 +260,13 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+          <div className="md:col-span-12">
+            <img
+              src={locationImg}
+              alt="Map of Heritage Apartments location in Mount Pleasant, Texas"
+              className="w-full h-auto shadow-soft"
+            />
           </div>
         </div>
       </section>
