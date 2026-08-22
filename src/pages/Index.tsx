@@ -316,6 +316,7 @@ const Index = () => {
           <div className="pt-8 flex flex-wrap items-center justify-between gap-4 text-sm text-primary-foreground/60">
             <p className="font-serif text-lg text-primary-foreground">Heritage Apartments</p>
             <p>© {new Date().getFullYear()} Heritage Apartments. All rights reserved.</p>
+            <p>Developed by Joshua Austin Land</p>
           </div>
         </div>
       </footer>
